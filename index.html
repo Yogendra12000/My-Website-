@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>YKKILLER 😊</title>
   <style>
+    /* Galaxy background */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+    }
+
     /* Intro screen */
     #intro {
       position: fixed;
@@ -18,8 +28,7 @@
       align-items: center;
       justify-content: center;
       z-index: 1000;
-      animation: fadeOut 2.5s ease forwards;
-      font-family: 'Segoe UI', sans-serif;
+      animation: fadeOut 2.8s ease forwards;
     }
 
     @keyframes fadeOut {
@@ -28,81 +37,81 @@
       100% { opacity: 0; visibility: hidden; }
     }
 
-    /* Glow effect */
     .glow {
-      text-shadow: 0 0 10px #00ffe1, 0 0 20px #00ffe1;
+      text-shadow: 0 0 15px #00ffe1, 0 0 30px #00ffe1;
       animation: pulse 2s infinite alternate;
     }
 
     @keyframes pulse {
-      from { text-shadow: 0 0 10px #00ffe1; }
-      to { text-shadow: 0 0 20px #00ffe1, 0 0 30px #00ffe1; }
-    }
-
-    /* Main body */
-    body {
-      background: linear-gradient(135deg, #1f1f1f, #121212);
-      color: #fff;
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      text-align: center;
+      from { text-shadow: 0 0 15px #00ffe1; }
+      to { text-shadow: 0 0 30px #00ffe1, 0 0 40px #00ffe1; }
     }
 
     header {
-      background-color: #00ffe1;
-      color: #000;
+      background-color: rgba(0, 0, 0, 0.6);
       padding: 20px;
       font-size: 28px;
       font-weight: bold;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      backdrop-filter: blur(8px);
+      border-bottom: 2px solid #00ffe1;
     }
 
     .menu {
       display: flex;
       flex-direction: column;
       gap: 20px;
-      margin: 40px auto;
-      max-width: 300px;
-      padding: 20px;
+      margin: 50px auto;
+      max-width: 320px;
+      padding: 0 20px;
+      animation: fadeIn 2s ease-in;
     }
 
     a {
       text-decoration: none;
       color: white;
-      background-color: #272727;
+      background: rgba(0, 0, 0, 0.5);
       padding: 15px;
-      border-radius: 10px;
+      border-radius: 12px;
       font-size: 18px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      transition: all 0.2s ease-in-out;
       border: 1px solid #00ffe1;
+      box-shadow: 0 0 10px #00ffe1;
+      transition: all 0.3s ease;
     }
 
     a:hover {
       background-color: #00ffe1;
-      color: #000;
-      transform: scale(1.03);
+      color: black;
+      transform: scale(1.05);
     }
 
     footer {
-      margin-top: 50px;
+      margin: 50px 0;
       font-size: 14px;
-      color: #888;
+      color: #ccc;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 500px) {
+      header {
+        font-size: 22px;
+      }
+
+      a {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Intro animation -->
   <div id="intro">
-    <div class="glow">👾 Welcome to YKKILLER 😊</div>
+    <div class="glow">🌌 YKKILLER 😊 - Loading...</div>
   </div>
 
-  <!-- Actual content -->
   <header>👾 Welcome to YKKILLER 😊</header>
 
   <div class="menu">
